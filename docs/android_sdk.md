@@ -1,6 +1,6 @@
 ## android平台ndk
 
-### 最新最稳当版本(r16b),截止2019-01-27
+### 最新版本
 https://developer.android.google.cn/ndk/downloads/
 
 ### 历史版本下载地址
