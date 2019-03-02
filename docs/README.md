@@ -1,5 +1,5 @@
 ## ffmpeg裁剪编译
-ffmpeg项目在android, ios, windows平台下编译裁剪
+ffmpeg项目在android, ios, windows,emscripten平台下编译裁剪
 
 你可以在[GitHub](https://github.com/lishaoliang/ffmpeg/)下载
 

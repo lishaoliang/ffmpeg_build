@@ -1,0 +1,101 @@
+++++++++++++++++++++++++++++++++++++++++++++
+ANDROID_NDK_ROOT: /opt/android-ndk-r15c
+AOSP_TOOLCHAIN_PATH: /opt/android-ndk-r15c/toolchains/x86_64-4.9/prebuilt/linux-x86_64/bin
+AOSP_ABI: x86_64
+AOSP_API: android-21
+AOSP_SYSROOT: /opt/android-ndk-r15c/sysroot
+AOSP_LD_SYSROOT: /opt/android-ndk-r15c/platforms/android-21/arch-x86_64
+AOSP_FLAGS: -D__ANDROID_API__=21 -march=x86-64 -msse4.2 -mpopcnt -mtune=intel -DCRYPTOPP_DISABLE_CLMUL -DCRYPTOPP_DISABLE_AESNI -DCRYPTOPP_DISABLE_SHANI -funwind-tables -fexceptions -frtti
+AOSP_SYS_ARCH_INC: /opt/android-ndk-r15c/sysroot/usr/include/x86_64-linux-android
+AOSP_STL_INC: /opt/android-ndk-r15c/sources/cxx-stl/gnu-libstdc++/4.9/include
+AOSP_STL_LIB: /opt/android-ndk-r15c/sources/cxx-stl/gnu-libstdc++/4.9/libs/x86_64/libgnustl_shared.so
+CPP: x86_64-linux-android-cpp
+CC: x86_64-linux-android-gcc
+CXX: x86_64-linux-android-g++
+LD: x86_64-linux-android-ld
+AS: x86_64-linux-android-as
+AR: x86_64-linux-android-ar
+RANLIB: x86_64-linux-android-ranlib
+STRIP: x86_64-linux-android-strip
+++++++++++++++++++++++++++++++++++++++++++++
+BUILD_ANDROID: --prefix=/home/lsl/share/src/libs/lib-android/x86_64 --enable-cross-compile --target-os=android --disable-asm --cc=x86_64-linux-android-gcc --arch=x86_64 --cross-prefix=x86_64-linux-android- --nm=x86_64-linux-android-nm --sysroot=/opt/android-ndk-r15c/platforms/android-21/arch-x86_64 
+--prefix=/home/lsl/share/src/libs/lib-android/x86_64
+--arch=x86_64
+--cc=x86_64-linux-android-gcc
+--cross-prefix=x86_64-linux-android-
+--sysroot=/opt/android-ndk-r15c/platforms/android-21/arch-x86_64
+++++++++++++++++++++++++++++++++++++++++++++
+FFMPEG_CUT: --disable-runtime-cpudetect --disable-debug --disable-logging --disable-swscale-alpha --disable-all --disable-everything --enable-avdevice --enable-avcodec --enable-avformat --enable-swresample --enable-swscale --enable-postproc --enable-avfilter --enable-decoder=h264 --enable-decoder=hevc --enable-encoder=aac --enable-encoder=mjpeg --enable-encoder=ljpeg --enable-encoder=jpeg2000 --enable-encoder=jpegls --enable-muxer=mp4 --enable-muxer=mjpeg --enable-protocol=file 
+++++++++++++++++++++++++++++++++++++++++++++
+install prefix            /home/lsl/share/src/libs/lib-android/x86_64
+source path               .
+C compiler                x86_64-linux-android-gcc
+C library                 bionic
+host C compiler           gcc
+host C library            glibc
+ARCH                      c (generic)
+big-endian                no
+runtime cpu detection     no
+debug symbols             no
+strip symbols             yes
+optimize for size         no
+optimizations             yes
+static                    yes
+shared                    no
+postprocessing support    no
+network support           yes
+threading support         pthreads
+safe bitstream reader     yes
+texi2html enabled         no
+perl enabled              yes
+pod2man enabled           yes
+makeinfo enabled          no
+makeinfo supports HTML    no
+
+External libraries:
+xlib			zlib
+
+External libraries providing hardware acceleration:
+
+Libraries:
+avcodec			avformat		swresample
+avdevice		avutil			swscale
+avfilter
+
+Programs:
+
+Enabled decoders:
+h264			hevc
+
+Enabled encoders:
+aac			jpegls			mjpeg
+jpeg2000		ljpeg
+
+Enabled hwaccels:
+
+Enabled parsers:
+
+Enabled demuxers:
+
+Enabled muxers:
+mjpeg			mov			mp4
+
+Enabled protocols:
+file
+
+Enabled filters:
+
+Enabled bsfs:
+null
+
+Enabled indevs:
+
+Enabled outdevs:
+
+License: LGPL version 2.1 or later
+Creating configuration files ...
+libavutil/avconfig.h is unchanged
+libavcodec/bsf_list.c is unchanged
+libavformat/protocol_list.c is unchanged
+
+WARNING: x86_64-linux-android-pkg-config not found, library detection may fail.

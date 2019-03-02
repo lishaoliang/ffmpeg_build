@@ -1,0 +1,100 @@
+++++++++++++++++++++++++++++++++++++++++++++
+ANDROID_NDK_ROOT: /opt/android-ndk-r15c
+AOSP_TOOLCHAIN_PATH: /opt/android-ndk-r15c/toolchains/aarch64-linux-android-4.9/prebuilt/linux-x86_64/bin
+AOSP_ABI: arm64-v8a
+AOSP_API: android-21
+AOSP_SYSROOT: /opt/android-ndk-r15c/sysroot
+AOSP_LD_SYSROOT: /opt/android-ndk-r15c/platforms/android-21/arch-arm64
+AOSP_FLAGS: -D__ANDROID_API__=21 -funwind-tables -fexceptions -frtti
+AOSP_SYS_ARCH_INC: /opt/android-ndk-r15c/sysroot/usr/include/aarch64-linux-android
+AOSP_STL_INC: /opt/android-ndk-r15c/sources/cxx-stl/gnu-libstdc++/4.9/include
+AOSP_STL_LIB: /opt/android-ndk-r15c/sources/cxx-stl/gnu-libstdc++/4.9/libs/arm64-v8a/libgnustl_shared.so
+CPP: aarch64-linux-android-cpp
+CC: aarch64-linux-android-gcc
+CXX: aarch64-linux-android-g++
+LD: aarch64-linux-android-ld
+AS: aarch64-linux-android-as
+AR: aarch64-linux-android-ar
+RANLIB: aarch64-linux-android-ranlib
+STRIP: aarch64-linux-android-strip
+++++++++++++++++++++++++++++++++++++++++++++
+BUILD_ANDROID: --prefix=/home/lsl/share/src/libs/lib-android/arm64-v8a --enable-cross-compile --target-os=android --disable-asm --cc=aarch64-linux-android-gcc --arch=arm64 --cross-prefix=aarch64-linux-android- --nm=aarch64-linux-android-nm --sysroot=/opt/android-ndk-r15c/platforms/android-21/arch-arm64 
+--prefix=/home/lsl/share/src/libs/lib-android/arm64-v8a
+--arch=arm64
+--cc=aarch64-linux-android-gcc
+--cross-prefix=aarch64-linux-android-
+--sysroot=/opt/android-ndk-r15c/platforms/android-21/arch-arm64
+++++++++++++++++++++++++++++++++++++++++++++
+FFMPEG_CUT: --disable-runtime-cpudetect --disable-debug --disable-logging --disable-swscale-alpha --disable-all --disable-everything --enable-avdevice --enable-avcodec --enable-avformat --enable-swresample --enable-swscale --enable-postproc --enable-avfilter --enable-decoder=h264 --enable-decoder=hevc --enable-encoder=aac --enable-encoder=mjpeg --enable-encoder=ljpeg --enable-encoder=jpeg2000 --enable-encoder=jpegls --enable-muxer=mp4 --enable-muxer=mjpeg --enable-protocol=file 
+++++++++++++++++++++++++++++++++++++++++++++
+install prefix            /home/lsl/share/src/libs/lib-android/arm64-v8a
+source path               .
+C compiler                aarch64-linux-android-gcc
+C library                 bionic
+host C compiler           gcc
+host C library            glibc
+ARCH                      c (generic)
+big-endian                no
+runtime cpu detection     no
+debug symbols             no
+strip symbols             yes
+optimize for size         no
+optimizations             yes
+static                    yes
+shared                    no
+postprocessing support    no
+network support           yes
+threading support         pthreads
+safe bitstream reader     yes
+texi2html enabled         no
+perl enabled              yes
+pod2man enabled           yes
+makeinfo enabled          no
+makeinfo supports HTML    no
+
+External libraries:
+xlib			zlib
+
+External libraries providing hardware acceleration:
+
+Libraries:
+avcodec			avformat		swresample
+avdevice		avutil			swscale
+avfilter
+
+Programs:
+
+Enabled decoders:
+h264			hevc
+
+Enabled encoders:
+aac			jpegls			mjpeg
+jpeg2000		ljpeg
+
+Enabled hwaccels:
+
+Enabled parsers:
+
+Enabled demuxers:
+
+Enabled muxers:
+mjpeg			mov			mp4
+
+Enabled protocols:
+file
+
+Enabled filters:
+
+Enabled bsfs:
+null
+
+Enabled indevs:
+
+Enabled outdevs:
+
+License: LGPL version 2.1 or later
+Creating configuration files ...
+libavcodec/bsf_list.c is unchanged
+libavformat/protocol_list.c is unchanged
+
+WARNING: aarch64-linux-android-pkg-config not found, library detection may fail.

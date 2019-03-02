@@ -1,0 +1,14 @@
+prefix=/home/lsl/share/src/libs/lib-android/armeabi
+exec_prefix=${prefix}
+libdir=/home/lsl/share/src/libs/lib-android/armeabi/lib
+includedir=/home/lsl/share/src/libs/lib-android/armeabi/include
+
+Name: libavfilter
+Description: FFmpeg audio/video filtering library
+Version: 6.107.100
+Requires: libavutil >= 55.78.100
+Requires.private: 
+Conflicts:
+Libs: -L${libdir}  -lavfilter -lm -lz -pthread -pthread
+Libs.private: 
+Cflags: -I${includedir}

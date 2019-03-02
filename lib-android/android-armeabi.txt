@@ -1,0 +1,98 @@
+++++++++++++++++++++++++++++++++++++++++++++
+ANDROID_NDK_ROOT: /opt/android-ndk-r15c
+AOSP_TOOLCHAIN_PATH: /opt/android-ndk-r15c/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64/bin
+AOSP_ABI: armeabi
+AOSP_API: android-19
+AOSP_SYSROOT: /opt/android-ndk-r15c/sysroot
+AOSP_LD_SYSROOT: /opt/android-ndk-r15c/platforms/android-19/arch-arm
+AOSP_FLAGS: -D__ANDROID_API__=19 -march=armv5te -mtune=xscale -mthumb -msoft-float -DCRYPTOPP_DISABLE_ASM -funwind-tables -fexceptions -frtti
+AOSP_SYS_ARCH_INC: /opt/android-ndk-r15c/sysroot/usr/include/arm-linux-androideabi
+AOSP_STL_INC: /opt/android-ndk-r15c/sources/cxx-stl/gnu-libstdc++/4.9/include
+AOSP_STL_LIB: /opt/android-ndk-r15c/sources/cxx-stl/gnu-libstdc++/4.9/libs/armeabi/libgnustl_shared.so
+CPP: arm-linux-androideabi-cpp
+CC: arm-linux-androideabi-gcc
+CXX: arm-linux-androideabi-g++
+LD: arm-linux-androideabi-ld
+AS: arm-linux-androideabi-as
+AR: arm-linux-androideabi-ar
+RANLIB: arm-linux-androideabi-ranlib
+STRIP: arm-linux-androideabi-strip
+++++++++++++++++++++++++++++++++++++++++++++
+BUILD_ANDROID: --prefix=/home/lsl/share/src/libs/lib-android/armeabi --enable-cross-compile --target-os=android --disable-asm --cc=arm-linux-androideabi-gcc --arch=armeabi --cross-prefix=arm-linux-androideabi- --nm=arm-linux-androideabi-nm --sysroot=/opt/android-ndk-r15c/platforms/android-19/arch-arm 
+--prefix=/home/lsl/share/src/libs/lib-android/armeabi
+--arch=armeabi
+--cc=arm-linux-androideabi-gcc
+--cross-prefix=arm-linux-androideabi-
+--sysroot=/opt/android-ndk-r15c/platforms/android-19/arch-arm
+++++++++++++++++++++++++++++++++++++++++++++
+FFMPEG_CUT: --disable-runtime-cpudetect --disable-debug --disable-logging --disable-swscale-alpha --disable-all --disable-everything --enable-avdevice --enable-avcodec --enable-avformat --enable-swresample --enable-swscale --enable-postproc --enable-avfilter --enable-decoder=h264 --enable-decoder=hevc --enable-encoder=aac --enable-encoder=mjpeg --enable-encoder=ljpeg --enable-encoder=jpeg2000 --enable-encoder=jpegls --enable-muxer=mp4 --enable-muxer=mjpeg --enable-protocol=file 
+++++++++++++++++++++++++++++++++++++++++++++
+install prefix            /home/lsl/share/src/libs/lib-android/armeabi
+source path               .
+C compiler                arm-linux-androideabi-gcc
+C library                 bionic
+host C compiler           gcc
+host C library            glibc
+ARCH                      c (armv5te)
+big-endian                no
+runtime cpu detection     no
+debug symbols             no
+strip symbols             yes
+optimize for size         no
+optimizations             yes
+static                    yes
+shared                    no
+postprocessing support    no
+network support           yes
+threading support         pthreads
+safe bitstream reader     yes
+texi2html enabled         no
+perl enabled              yes
+pod2man enabled           yes
+makeinfo enabled          no
+makeinfo supports HTML    no
+
+External libraries:
+xlib			zlib
+
+External libraries providing hardware acceleration:
+
+Libraries:
+avcodec			avformat		swresample
+avdevice		avutil			swscale
+avfilter
+
+Programs:
+
+Enabled decoders:
+h264			hevc
+
+Enabled encoders:
+aac			jpegls			mjpeg
+jpeg2000		ljpeg
+
+Enabled hwaccels:
+
+Enabled parsers:
+
+Enabled demuxers:
+
+Enabled muxers:
+mjpeg			mov			mp4
+
+Enabled protocols:
+file
+
+Enabled filters:
+
+Enabled bsfs:
+null
+
+Enabled indevs:
+
+Enabled outdevs:
+
+License: LGPL version 2.1 or later
+Creating configuration files ...
+
+WARNING: arm-linux-androideabi-pkg-config not found, library detection may fail.
