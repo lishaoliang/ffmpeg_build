@@ -13,6 +13,8 @@ LOG_TXT=$LIBS_DIR/ffmpeg-$ARCH.txt
 # 编译android的部分参数
 BUILD_ANDROID="\
 --prefix=$PREFIX \
+--cc="emcc" \
+--enable-cross-compile --target-os=none --arch=x86_64 --cpu=generic \
 --disable-asm "
 
 
