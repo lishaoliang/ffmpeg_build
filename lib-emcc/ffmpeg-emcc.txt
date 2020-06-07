@@ -1,11 +1,13 @@
 ++++++++++++++++++++++++++++++++++++++++++++
 ARCH: emcc
-BUILD_ANDROID: --prefix=/home/lsl/share/src/libs/lib-emcc --disable-asm 
+BUILD_ANDROID: --prefix=/home/lsl/share/tmp/ffmpeg/src/libs/lib-emcc --cc=emcc --enable-cross-compile --target-os=none --arch=x86_64 --cpu=generic --disable-pthreads --disable-asm 
 FFMPEG_CUT: --disable-runtime-cpudetect --disable-debug --disable-logging --disable-swscale-alpha --disable-all --disable-everything --enable-avdevice --enable-avcodec --enable-avformat --enable-swresample --enable-swscale --enable-postproc --enable-avfilter --enable-decoder=h264 --enable-decoder=hevc 
-install prefix            /home/lsl/share/src/libs/lib-emcc
+install prefix            /home/lsl/share/tmp/ffmpeg/src/libs/lib-emcc
 source path               .
-C compiler                gcc
-C library                 glibc
+C compiler                emcc
+C library                 
+host C compiler           gcc
+host C library            glibc
 ARCH                      c (generic)
 big-endian                no
 runtime cpu detection     no
@@ -17,7 +19,7 @@ static                    yes
 shared                    no
 postprocessing support    no
 network support           yes
-threading support         pthreads
+threading support         no
 safe bitstream reader     yes
 texi2html enabled         no
 perl enabled              yes
@@ -26,11 +28,9 @@ makeinfo enabled          no
 makeinfo supports HTML    no
 
 External libraries:
-iconv			xlib			zlib
+iconv			sdl2			xlib
 
 External libraries providing hardware acceleration:
-cuda			nvenc			v4l2_m2m
-cuvid
 
 Libraries:
 avcodec			avformat		swresample

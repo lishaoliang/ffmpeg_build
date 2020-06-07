@@ -1,7 +1,7 @@
-prefix=/home/lsl/share/src/libs/lib-emcc
+prefix=/home/lsl/share/tmp/ffmpeg/src/libs/lib-emcc
 exec_prefix=${prefix}
-libdir=/home/lsl/share/src/libs/lib-emcc/lib
-includedir=/home/lsl/share/src/libs/lib-emcc/include
+libdir=/home/lsl/share/tmp/ffmpeg/src/libs/lib-emcc/lib
+includedir=/home/lsl/share/tmp/ffmpeg/src/libs/lib-emcc/include
 
 Name: libswscale
 Description: FFmpeg image rescaling library

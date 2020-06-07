@@ -15,6 +15,7 @@ BUILD_ANDROID="\
 --prefix=$PREFIX \
 --cc="emcc" \
 --enable-cross-compile --target-os=none --arch=x86_64 --cpu=generic \
+--disable-pthreads \
 --disable-asm "
 
 
@@ -38,7 +39,20 @@ cd ffmpeg-3.4.5
 
 emconfigure ./configure $BUILD_ANDROID $FFMPEG_CUT >> $LOG_TXT
 
-emmake make clean
-emmake make -j4
-emmake make install
+
+# https://zhuanlan.zhihu.com/p/40786748
+# ffbuild/config.mak文件：
+# 修改cxx为emcc
+# - CXX=gcc
+# + CXX=emcc
+# 修改ar为emar
+# - AR=ar
+# + AR=emar
+# 去掉ranlib
+# - RANLIB=ranlib
+# + #RANLIB=ranlib
+
+#emmake make clean
+#emmake make -j4
+#emmake make install
 
