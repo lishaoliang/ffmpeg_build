@@ -22,3 +22,10 @@ export FFMPEG_MIN="\
 --enable-encoder=ljpeg --enable-encoder=jpeg2000 --enable-encoder=jpegls \
 --enable-muxer=mp4 --enable-muxer=mjpeg \
 --enable-protocol=file "
+
+#全部支持
+export FFMPEG_ALL="\
+--disable-runtime-cpudetect \
+--disable-debug --disable-logging \
+--disable-programs \
+--disable-doc  "

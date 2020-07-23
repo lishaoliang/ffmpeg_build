@@ -21,7 +21,7 @@ BUILD_ANDROID="\
 
 #加载ffmpeg裁剪参数
 source cfg_ffmpeg.sh
-FFMPEG_CUT=$FFMPEG_H26X
+FFMPEG_CUT=$FFMPEG_ALL
 
 echo "BUILD_ANDROID: $BUILD_ANDROID"
 echo "FFMPEG_CUT: $FFMPEG_CUT"
@@ -48,9 +48,9 @@ emconfigure ./configure $BUILD_ANDROID $FFMPEG_CUT >> $LOG_TXT
 # 修改ar为emar
 # - AR=ar
 # + AR=emar
-# 去掉ranlib
+# 修改ranlib
 # - RANLIB=ranlib
-# + #RANLIB=ranlib
+# + RANLIB=emranlib
 
 #emmake make clean
 #emmake make -j4
